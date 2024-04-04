@@ -5,5 +5,7 @@ app_name ='restaurant'
 
 urlpatterns = [
     path('',views.index,name='index'),
-    path('api/bookings/',views.BookingView.as_view())
+    path('api/bookings/',views.BookingView.as_view()),
+    path('menu/', views.MenuItemsView.as_view()),
+    path('menu/<int:pk>', views.MenuRetrieveDestroyAPIView.as_view()),
 ]
